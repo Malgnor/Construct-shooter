@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="9075772860940477">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3009618513047862" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="630218246181251" type="Crosshair">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="8240610231695341" type="Hero">
+                    <param id="0" name="X">Crosshair.X</param>
+                    <param id="1" name="Y">Crosshair.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
