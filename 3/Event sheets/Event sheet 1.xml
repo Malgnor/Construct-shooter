@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="2449621617936463">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4876969842797916" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6468560688836533" type="Player">
+                    <param id="0" name="X">ceil(random(2)) &gt; 1 ? 256 : 3840</param>
+                    <param id="1" name="Y">ceil(random(2)) &gt; 1 ? 256 : 3840</param>
+                </action>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="4609815868437173" type="Player">
+                    <param id="0" name="Gravity">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="5026911736048813" type="SpawnPoint">
+                    <param id="0" name="Object">Estrela</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="210650325271725">
+            <conditions>
+                <condition id="-18" name="On created" sid="293740189694234" type="Estrela" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5461260902839074" type="Estrela">
+                    <param id="0" name="Pin to">BuracoNegro</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="7460724304925021" type="Estrela">
+                    <param id="0" name="Instance variable">P1</param>
+                    <param id="1" name="Value">floor(random(2))</param>
+                </action>
+                <action id="-10" name="Set value" sid="9473872788619039" type="Estrela">
+                    <param id="0" name="Instance variable">P2</param>
+                    <param id="1" name="Value">floor(random(2))</param>
+                </action>
+                <action id="-10" name="Set value" sid="1343630659814716" type="Estrela">
+                    <param id="0" name="Instance variable">P3</param>
+                    <param id="1" name="Value">floor(random(2))</param>
+                </action>
+                <action id="-10" name="Set value" sid="6163658608965544" type="Estrela">
+                    <param id="0" name="Instance variable">P4</param>
+                    <param id="1" name="Value">floor(random(2))</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="6601186976500578" type="Estrela">
+                    <param id="0" name="Speed">floor(random(180))-90</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4985093245223292">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8840475433780801" type="Estrela">
+                            <param id="0" name="Instance variable">P1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="3819470776695722" type="Estrela">
+                            <param id="0" name="Object">Planeta</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">ceil(random(2)) &gt; 1 ? 5 : 1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6003756327811439" type="Estrela">
+                            <param id="0" name="Instance variable">P1</param>
+                            <param id="1" name="Value">Planeta.UID</param>
+                        </action>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="8909374066992455" type="Planeta">
+                            <param id="0" name="This image point">0</param>
+                            <param id="1" name="Object">Estrela</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6337392533470994">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="945966728334667" type="Estrela">
+                            <param id="0" name="Instance variable">P2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6202827636000115" type="Estrela">
+                            <param id="0" name="Object">Planeta</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">ceil(random(2)) &gt; 1 ? 6 : 2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2781503024944636" type="Estrela">
+                            <param id="0" name="Instance variable">P2</param>
+                            <param id="1" name="Value">Planeta.UID</param>
+                        </action>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="5842540587009424" type="Planeta">
+                            <param id="0" name="This image point">0</param>
+                            <param id="1" name="Object">Estrela</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2652736331897366">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7371708296248177" type="Estrela">
+                            <param id="0" name="Instance variable">P3</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5108572655399943" type="Estrela">
+                            <param id="0" name="Object">Planeta</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">ceil(random(2)) &gt; 1 ? 7 : 3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8773614178713582" type="Estrela">
+                            <param id="0" name="Instance variable">P3</param>
+                            <param id="1" name="Value">Planeta.UID</param>
+                        </action>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="7884210483411975" type="Planeta">
+                            <param id="0" name="This image point">0</param>
+                            <param id="1" name="Object">Estrela</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3369502035290736">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5819158993495542" type="Estrela">
+                            <param id="0" name="Instance variable">P4</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="9459889261932989" type="Estrela">
+                            <param id="0" name="Object">Planeta</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">ceil(random(2)) &gt; 1 ? 8 : 4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1948823922682419" type="Estrela">
+                            <param id="0" name="Instance variable">P4</param>
+                            <param id="1" name="Value">Planeta.UID</param>
+                        </action>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="5658019392872087" type="Planeta">
+                            <param id="0" name="This image point">0</param>
+                            <param id="1" name="Object">Estrela</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5988036968588987">
+            <conditions>
+                <condition id="-18" name="On created" sid="3695409156332311" type="Planeta" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="863879879010046" type="Planeta">
+                    <param id="0" name="Object">Php</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Set text" sid="5525265152756587" type="Php">
+                    <param id="0" name="Text">Planeta.Massa</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8516388972639987" type="Php">
+                    <param id="0" name="Pin to">Planeta</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9514041184148215">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="9716605438089394" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="704598036670002" type="Player">
+                    <param id="0" name="X">Player.X &gt;= 4096 ? 0+1 : Player.X &lt;= 0 ? 4096-1 : Player.X</param>
+                    <param id="1" name="Y">Player.Y &gt;= 4096 ? 0+1 : Player.Y &lt;= 0 ? 4096-1 : Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4730823844978467">
+            <conditions>
+                <condition behavior="Physics" id="4" name="Is enabled" sid="4659891320355643" type="Player" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="9528568311170112" type="Player">
+                    <param id="0" name="Force">0.01</param>
+                    <param id="1" name="X">BuracoNegro.X</param>
+                    <param id="2" name="Y">BuracoNegro.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6417371531965046">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3417301396927316" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="1608770932992357" type="Player">
+                    <param id="0" name="Force X">0</param>
+                    <param id="1" name="Force Y">-1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7440841692215381">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3677210119984016" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="9527085591821504" type="Player">
+                    <param id="0" name="Force X">0</param>
+                    <param id="1" name="Force Y">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1124680209436885">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1464805394899795" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="5089835874325193" type="Player">
+                    <param id="0" name="Force X">-1</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="190174063078899">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5318658764324915" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="6923611929249561" type="Player">
+                    <param id="0" name="Force X">1</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2341901553649772">
+            <conditions>
+                <condition disabled="1" id="1" name="Is overlapping another object" sid="1235243424854795" type="Estrela">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4338424137521225">
+                    <conditions>
+                        <condition disabled="1" id="-14" name="Pick by unique ID" sid="5028388568537817" type="Planeta">
+                            <param id="0" name="Unique ID">Estrela.P1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-9" name="Destroy" sid="2141841463736201" type="Planeta" />
+                        <action disabled="1" id="-10" name="Set value" sid="8324180462398571" type="Estrela">
+                            <param id="0" name="Instance variable">P1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9119922264180901">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3017556539711617" type="Planeta">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="5252388839768384" type="Planeta">
+                    <param id="0" name="Instance variable">Massa</param>
+                    <param id="1" name="Value">Player.Physics.Mass</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5148932939757754">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="5822875327569234" type="Planeta">
+                            <param id="0" name="Object">Php</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2952917635006903" type="Php">
+                            <param id="0" name="Text">Planeta.Massa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9069422718639164">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2556728216948129" type="Planeta">
+                    <param id="0" name="Instance variable">Massa</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="105198813572307" type="Planeta" />
+            </actions>
+            <sub-events>
+                <event-block sid="8589815250654777">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="8742073526269233" type="Planeta">
+                            <param id="0" name="Object">Php</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="540114522557329" type="Php" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
